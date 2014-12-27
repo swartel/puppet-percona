@@ -4,9 +4,6 @@
 #
 # === Parameters
 #
-# [*mysql_version*]
-#   The Percona mysql version to be used. Currently 5.5 or 5.6
-#
 # [*root_password*]
 #   The root password of the database
 #
@@ -125,7 +122,6 @@
 # Copyright 2013 Alessandro De Salvo
 #
 class percona (
-  $mysql_version = "5.5",
   $root_password = undef,
   $old_passwords = false,
   $datadir = "/var/lib/mysql",

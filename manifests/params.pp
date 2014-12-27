@@ -1,4 +1,30 @@
-class percona::params {
+# == Class: percona::params
+#
+# Module for Percona XtraDB management.
+#
+# === Parameters
+#
+# [*mysql_version*]
+#   The Percona mysql version to be used. Currently 5.5 or 5.6
+#
+#
+# === Examples
+#
+#  class { 'percona::params':
+#    mysql_version => '5.6'
+#  }
+#
+# === Authors
+#
+# Alessandro De Salvo <Alessandro.DeSalvo@roma1.infn.it>
+#
+# === Copyright
+#
+# Copyright 2013 Alessandro De Salvo
+#
+class percona::params (
+  $mysql_version = "5.5"
+) {
 
   case $::osfamily {
     'RedHat': {
